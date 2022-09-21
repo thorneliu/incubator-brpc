@@ -22,6 +22,7 @@ endif()
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 include_directories(${PROJECT_SOURCE_DIR}/src)
+include_directories("/usr/local/include/nacos/")
 
 add_library(BUTIL_LIB OBJECT ${BUTIL_SOURCES})
 add_library(SOURCES_LIB OBJECT ${SOURCES})

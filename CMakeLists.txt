@@ -212,7 +212,8 @@ set(DYNAMIC_LIB
     ${THRIFTNB_LIB}
     ${OPENSSL_CRYPTO_LIBRARY}
     dl
-    z)
+    z
+    nacos-cli)
 
 if(WITH_MESALINK)
     list(APPEND DYNAMIC_LIB ${MESALINK_LIB})
