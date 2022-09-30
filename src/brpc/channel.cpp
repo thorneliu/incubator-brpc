@@ -395,12 +395,7 @@ void Channel::CallMethod(const google::protobuf::MethodDescriptor* method,
         CHECK(cntl->protocol_param().empty());
         cntl->protocol_param() = _options.protocol.param();
     }
-    if (_options.protocol == brpc::PROTOCOL_HTTP) {
-        URI& uri = cntl->http_request().uri();
-        if (uri.host().empty() && !_service_name.empty()) {
-            uri.SetHostAndPort(_service_name);
-        }
-    }
+
     cntl->_preferred_index = _preferred_index;
     cntl->_retry_policy = _options.retry_policy;
     if (_options.enable_circuit_breaker) {
